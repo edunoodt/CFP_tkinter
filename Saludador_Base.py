@@ -6,7 +6,6 @@ def btnSaludar():
     texto='¡¡¡Hola '+txtNombre.get()
     if flagSonrisa.get() == 1:
         texto = texto + ' :) '
-
     texto = texto + '!!!'
     messagebox.showinfo('Saludo',texto)
 
