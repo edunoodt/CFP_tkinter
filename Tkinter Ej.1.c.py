@@ -8,7 +8,7 @@ def btnCalcular():
 
 
 wdow = tk.Tk()
-wdow.geometry('700x400')
+
 wdow.title('Facturador de viajes')
 
 lbl_dias_wdow = tk.Label(wdow,text='Días que utilizó el vehículo  ',font=('Arial',15))
