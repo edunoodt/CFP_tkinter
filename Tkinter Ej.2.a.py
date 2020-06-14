@@ -4,19 +4,20 @@ def valor_cuota ():
     total = float(monto_Entry.get())
     cuotas = float(cuotas_Entry.get())
     int_dic={'0-2':0,'3-6':0.1,'7-12':0.2,'13-18':0.3}
-    if cuotas < 3:
-        int=int_dic['0-2']
-    elif 3<=cuotas<7:
-        int=int_dic['3-6']
-    elif cuotas<13:
-        int=int_dic['7-12']
+    if cuotas < 19:
+        if cuotas < 3:
+            int=int_dic['0-2']
+        elif 3<=cuotas<7:
+            int=int_dic['3-6']
+        elif cuotas<13:
+            int=int_dic['7-12']
+        else:
+            int=int_dic['13-18']
 
-        elif
-    int = 0.15
-    cuota=0,000.00
-    cuota = (total/(1-(1+int)**(-cuotas)))*int/(1+int)
-    ValorCuota_Lbl.configure(text='$'+str(cuota), relief='sunken', bg='white', font=('arial', 12))
-
+        cuota = round((total / (1 - (1 + int) ** (-cuotas))) * int / (1 + int),2)
+        ValorCuota_Lbl.configure(text='$' + str(cuota), relief='sunken', bg='white', font=('arial', 12))
+    else:
+        ValorCuota_Lbl.configure(text='18 cuotas màximo', relief='sunken', bg='white', font=('arial', 12))
 
 main = Tk()
 
